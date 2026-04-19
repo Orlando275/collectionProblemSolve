@@ -1,4 +1,4 @@
-class Solution {
+class Solution { // O(n) time, O(1) space
 public:
   void merge(vector<int> &nums1, int m, vector<int> &nums2, int n) {
     if (n == 0)

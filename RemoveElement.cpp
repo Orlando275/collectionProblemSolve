@@ -1,4 +1,4 @@
-class Solution {
+class Solution { // O(n) time, O(1) space
 public:
   int removeElement(vector<int> &nums, int val) {
     if (nums.size() == 0) // check if it doesnt have elements
