@@ -1,7 +1,7 @@
 class Solution {
 public:
   int removeElement(vector<int> &nums, int val) {
-    if (nums.size() == 0)
+    if (nums.size() == 0) // check if it doesnt have elements
       return 0;
 
     int j = 0;
