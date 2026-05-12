@@ -1,4 +1,4 @@
-class Solution {
+class Solution { // O(n²) time O(1) space
 public:
   int maxProfit(vector<int> &prices) {
     int minprofit = prices[0];
