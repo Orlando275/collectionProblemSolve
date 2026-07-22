@@ -1,28 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 void solve() {
   int n;
   cin >> n;
   vector<int> v(n);
-  int l = 0;
+  for (auto &z : v)
+    cin >> z;
   map<int, int> m;
-  long long res = 0;
-  for (int i{}; i < n; i++)
-    cin >> v[i];
+  int res = INT_MAX;
   for (int i{}; i < n; i++) {
     auto it = m.find(v[i]);
-    if (it == m.end()) {
-      res += i - l + 1;
-    } else {
-      l = max(l, it->second + 1);
-      res += i - l + 1;
+    if (it != m.end()) {
+      res = min(res, (i - (it->second)) + 1);
     }
     m[v[i]] = i;
   }
-  cout << res << "\n";
+  (res == INT_MAX) ? cout << -1 << '\n' : cout << res << '\n';
 }
 int main() {
   ios::sync_with_stdio(0);
   cin.tie(0);
-  solve();
+  int t;
+  cin >> t;
+  while (t--)
+    solve();
 }
