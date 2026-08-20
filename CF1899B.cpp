@@ -27,4 +27,3 @@ int main() {
   while (t--)
     solve();
 }
-v[i] - v[l - 1] > k ||
